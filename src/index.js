@@ -15,12 +15,12 @@ app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: true,
-  })
+  }),
 );
 
 app.listen(PORT, () => {
   console.log(
-    `[index] Servidor rodando na porta ${PORT}\n[ENV] ${process.env.ENV}`
+    `[index] Servidor rodando na porta ${PORT}\n[ENV] ${process.env.ENV}`,
   );
 });
 

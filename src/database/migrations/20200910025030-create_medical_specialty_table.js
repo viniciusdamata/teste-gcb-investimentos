@@ -2,7 +2,14 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("doctor", {
+    /**
+     * Add altering commands here.
+     *
+     * Example:
+     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
+     */
+
+    await queryInterface.createTable("medical_specialty", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -13,20 +20,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
-      CRM: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      //!cidade e estado deveriam ser tabelas, mas devido ao tempo é melhor fazer assim
-      estado: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      cidade: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
@@ -41,6 +34,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("doctor");
+    await queryInterface.dropTable("medical_specialty");
   },
 };
