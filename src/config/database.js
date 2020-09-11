@@ -3,8 +3,9 @@ module.exports = {
   password: process.env.DB_PASSWORD || "123456",
   database: process.env.DB_DATABASE_NAME || "hospital",
   host: process.env.HOST || "127.0.0.1",
+  port: 3306,
   dialect: "mysql",
   dialectOptions: {
-    connectTimeout: 1000 * 10, // 1000 * 10 milissegundos = 10 segundos
+    connectTimeout: 1000 * 5, // 1000 * 10 milissegundos = 10 segundos
   },
 };

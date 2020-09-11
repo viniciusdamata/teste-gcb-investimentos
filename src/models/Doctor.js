@@ -10,23 +10,18 @@ module.exports = (sequelize, DataTypes) => {
     {
       freezeTableName: true,
       tableName: "doctor",
-    }
+    },
   );
+
+  Doctor.associate = function (models) {
+    Doctor.hasMany(models.DoctorMedicalSpecialty, {
+      foreignKey: {
+        name: "id_doctor",
+        fieldName: "id_doctor",
+      },
+      as: "doctor_medical_specialty",
+    });
+  };
 
   return Doctor;
 };
-
-/**
- *       CRM: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      estado: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
-      cidade: {
-        allowNull: false,
-        type: Sequelize.STRING,
-      },
- */
