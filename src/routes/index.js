@@ -3,8 +3,9 @@ const { Router } = require("express");
 const router = Router();
 router.use(
   "/api",
-  require("./doctorRoute.js"),
+  require("./doctorRoute"),
   require("./medicalSpecialtyRoute"),
+  require("./doctorMedicalSpecialtyRoute")
 );
 
 module.exports = router;

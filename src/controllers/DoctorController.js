@@ -50,7 +50,16 @@ module.exports = {
    */
   async show(req, res) {
     const { id } = req.params;
-    const data = await Doctor.findByPk(id);
+    const data = await Doctor.findOne({
+      include: [
+        {
+          model: DoctorMedicalSpecialty,
+          as: "doctor_medical_specialty",
+          include: { model: MedicalSpecialty, as: "medical_specialty" },
+        },
+      ],
+      where: { id },
+    });
     res.json({ data });
   },
   /**
