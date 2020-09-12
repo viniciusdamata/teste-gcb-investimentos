@@ -69,6 +69,7 @@ module.exports = {
   async destroy(req, res) {
     try {
       const { id } = req.params;
+      await DoctorMedicalSpecialty.destroy({ where: { id_doctor: id } });
       const data = await Doctor.destroy({ where: { id } });
       res.json({ data });
     } catch (error) {
@@ -82,7 +83,7 @@ module.exports = {
   async update(req, res) {
     try {
       const { id } = req.params;
-      const body = req;
+      const { body } = req;
       const data = await Doctor.update(body, { where: { id } });
       res.json({ data });
     } catch (error) {

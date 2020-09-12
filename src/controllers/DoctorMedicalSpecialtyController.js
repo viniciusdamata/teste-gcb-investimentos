@@ -10,11 +10,15 @@ module.exports = {
    */
   async store(req, res) {
     try {
-      const { id_doctor, id_medical_specialty } = req.body;
-      const data = await Doctor.create({ id_doctor, id_medical_specialty });
+      const { doctor, medical_specialty } = req.body;
+      console.log("store -> doctor, medical_specialty", doctor, medical_specialty)
+      const data = await DoctorMedicalSpecialty.create({
+        id_doctor: doctor.id,
+        id_medical_specialty: medical_specialty.id,
+      });
       res.status(201).json({ data });
     } catch (error) {
-      res.status(500).json({ data: error });
+      res.status(500).json({ data: error.message });
     }
   },
   /**
@@ -64,7 +68,7 @@ module.exports = {
   async update(req, res) {
     try {
       const { id } = req.params;
-      const body = req;
+      const { body } = req;
       const data = await DoctorMedicalSpecialty.update(body, { where: { id } });
       res.json({ data });
     } catch (error) {

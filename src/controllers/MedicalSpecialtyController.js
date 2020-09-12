@@ -59,7 +59,7 @@ module.exports = {
   async update(req, res) {
     try {
       const { id } = req.params;
-      const body = req;
+      const { body } = req;
       const data = await MedicalSpecialty.update(body, { where: { id } });
       res.json({ data });
     } catch (error) {
