@@ -26,9 +26,6 @@ Faça da forma em que se sentir mais confortável, deixe sua imaginação fluir.
 
 # ----------------------- # # Dúvidas # # -----------------------
 
-•
-Chamar no whatsapp: (11) 94339-0983 - Wagner Augusto até às 20h
-
 # ------ # # Especialidades a serem cadastradas no banco # # ------
 
 •
