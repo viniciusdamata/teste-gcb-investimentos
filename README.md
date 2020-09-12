@@ -19,6 +19,12 @@ yarn sequelize db:create
 yarn sequelize db:migrate
 ```
 
+- rodar o comando das seeds
+
+```
+yarn sequelize db:seed:all
+```
+
 - rodar o comando `yarn prod` para rodar em ambiente de produção ou `yarn dev` para rodar em ambiente de desenvolvimento
 
 ## Ferramentas utilizadas frontend
