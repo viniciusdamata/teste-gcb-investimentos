@@ -7,16 +7,16 @@
 - criar o arquivo `.env.development` usando o `.env.example` como exemplo
 - criar o arquivo `.env.production` usando o `.env.example` como exemplo
 
-- rodar o comando para rodar as migrations
-
-```
-yarn sequelize db:migrate
-```
-
 - rodar o comando para criar a datatable no mysql
 
 ```
 yarn sequelize db:create
+```
+
+- rodar o comando para rodar as migrations
+
+```
+yarn sequelize db:migrate
 ```
 
 - rodar o comando `yarn prod` para rodar em ambiente de produção ou `yarn dev` para rodar em ambiente de desenvolvimento
