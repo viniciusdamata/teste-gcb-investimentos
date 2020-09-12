@@ -1,6 +1,6 @@
 - [teste gcb investimentos](/docs/teste_vaga.md)
 - [comandos sequelize](/docs/sequelize_commands.md)
-- [documentação api](/docs/api_routes)
+- [documentação api](/docs/api_routes.md)
 
 ### Instruções para iniciar
 
